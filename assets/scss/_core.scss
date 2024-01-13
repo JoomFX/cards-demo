@@ -1,0 +1,24 @@
+@use "./_variables.scss" as *;
+
+// Section
+.section {
+  padding: $section-padding 0;
+}
+
+.section-intro {
+  margin: 0 0 $section-intro-margin;
+  text-align: center;
+}
+
+// Grid Adjustments
+.col-md-3 {
+  + .col-md-3 {
+    @media (max-width: 767.98px) {
+      margin-top: 30px;
+    }
+  }
+}
+
+.grid--margin-top {
+  margin-top: 30px;
+}

@@ -1,0 +1,135 @@
+@use "./_variables.scss" as *;
+
+.qb-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $dune;
+  color: $black;
+  font-size: 16px;
+}
+
+.qb-card__banner {
+  padding: $card-banner-padding;
+  font-size: 24px;
+  font-weight: bold;
+
+  @media (max-width: 767.98px) {
+    font-size: 18px;
+  }
+}
+
+.qb-card__image {
+  img {
+    width: 100%;
+    height: $card-image-height;
+  }
+}
+
+.qb-card__content-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.qb-card__title {
+  margin: 0;
+  padding: $card-title-padding;
+  font-size: 36px;
+  font-weight: bold;
+
+  // This does not come from the ticket requirements
+  @media (max-width: 991.98px) {
+    font-size: 26px;
+  }
+
+  @media (max-width: 767.98px) {
+    font-size: 24px;
+  }
+}
+
+.qb-card__text {
+  padding: 0 $card-text-padding $card-text-padding;
+}
+
+.qb-card__button-container {
+  padding: $card-button-container-padding;
+}
+
+.qb-card__button {
+  padding: $card-button-padding-y $card-button-padding-x;
+  display: inline-flex;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.qb-card--category-natural {
+  .qb-card__banner,
+  .qb-card__button {
+    background-color: $asparagus;
+    color: $black;
+  }
+
+  .qb-card__button {
+    &:hover {
+      background-color: $elm;
+      color: $white;
+    }
+  }
+
+  .qb-card__title {
+    color: $asparagus;
+  }
+}
+
+.qb-card--category-historical {
+  .qb-card__banner,
+  .qb-card__button {
+    background-color: $carrot;
+    color: $black;
+  }
+
+  .qb-card__button {
+    &:hover {
+      background-color: $geraldine;
+    }
+  }
+
+  .qb-card__title {
+    color: $carrot;
+  }
+}
+
+.qb-card--category-monument {
+  .qb-card__banner,
+  .qb-card__button {
+    background-color: $elm;
+    color: $white;
+  }
+
+  .qb-card__button {
+    &:hover {
+      background-color: $asparagus;
+      color: $black;
+    }
+  }
+
+  .qb-card__title {
+    color: $elm;
+  }
+}
+
+.qb-card--featured {
+  background-color: $elm;
+  color: $white;
+
+  .qb-card__button {
+    background-color: $chrome;
+    color: $black;
+
+    &:hover {
+      background-color: $picton-blue;
+    }
+  }
+}
